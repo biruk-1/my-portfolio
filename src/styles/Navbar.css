@@ -1,0 +1,94 @@
+/* Navbar.css */
+
+/* Light Theme (Default) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb; /* Primary color */
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  color: #4b5563; /* Gray text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #2563eb; /* Primary color */
+}
+
+.navbar-link-icon {
+  margin-right: 0.5rem;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #4b5563; /* Gray text */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  color: #2563eb; /* Primary color */
+}
+
+/* Dark Theme */
+.dark .navbar {
+  background-color: #1e293b; /* Dark background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.dark .navbar-brand {
+  color: #7c3aed; /* Accent color (Purple) */
+}
+
+.dark .navbar-link {
+  color: #f8fafc; /* Light text */
+}
+
+.dark .navbar-link:hover {
+  color: #7c3aed; /* Accent color (Purple) */
+}
+
+.dark .dark-mode-toggle {
+  color: #f8fafc; /* Light text */
+}
+
+.dark .dark-mode-toggle:hover {
+  color: #7c3aed; /* Accent color (Purple) */
+}

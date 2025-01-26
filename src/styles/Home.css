@@ -1,0 +1,78 @@
+/* Home.css */
+
+/* Light Theme (Default) */
+.home-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #7c3aed); /* Gradient background */
+  color: #ffffff; /* White text */
+}
+
+.home-content {
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-skills {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Ensure skills wrap on smaller screens */
+}
+
+.home-skill {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.home-skill:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2); /* Brighter background on hover */
+}
+
+.home-skill-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark Theme */
+.dark .home-section {
+  background: linear-gradient(135deg, #1e293b, #4c1d95); /* Dark gradient background */
+}
+
+.dark .home-skill {
+  background-color: rgba(255, 255, 255, 0.05); /* Darker semi-transparent background */
+}
+
+.dark .home-skill:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Brighter background on hover */
+}

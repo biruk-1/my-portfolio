@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Experience.css";
 
 const Experience = () => {
   const experienceData = [
@@ -23,17 +24,17 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Experience</h2>
-        <div className="space-y-8">
+    <section id="experience" className="experience-section">
+      <div className="experience-container">
+        <h2 className="experience-title">Experience</h2>
+        <div className="experience-list">
           {experienceData.map((exp, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2">{exp.role}</h3>
-              <p className="text-gray-600 mb-2">
+            <div key={index} className="experience-card">
+              <h3 className="experience-role">{exp.role}</h3>
+              <p className="experience-company">
                 <strong>{exp.company}</strong> | {exp.duration}
               </p>
-              <ul className="list-disc list-inside text-gray-600">
+              <ul className="experience-responsibilities">
                 {exp.responsibilities.map((responsibility, i) => (
                   <li key={i}>{responsibility}</li>
                 ))}

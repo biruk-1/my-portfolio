@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Projects.css";
 
 const Projects = () => {
   const projectsData = [
@@ -33,28 +34,22 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-100">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="projects" className="projects-section">
+      <div className="projects-container">
+        <h2 className="projects-title">Projects</h2>
+        <div className="projects-grid">
           {projectsData.map((project, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <p className="text-gray-600 mb-4">
+            <div key={index} className="project-card">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+              <p className="project-technologies">
                 <strong>Technologies:</strong> {project.technologies}
               </p>
-              <div className="flex space-x-4">
-                <a
-                  href={project.githubLink}
-                  className="text-blue-600 hover:underline"
-                >
+              <div className="project-links">
+                <a href={project.githubLink} className="project-link">
                   GitHub
                 </a>
-                <a
-                  href={project.demoLink}
-                  className="text-blue-600 hover:underline"
-                >
+                <a href={project.demoLink} className="project-link">
                   Live Demo
                 </a>
               </div>

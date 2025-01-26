@@ -1,0 +1,93 @@
+/* About.css */
+
+/* Light Theme (Default) */
+.about-section {
+  padding: 5rem 0;
+  background-color: #f8fafc; /* Light background */
+  color: #1e293b; /* Dark text */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2563eb; /* Primary color */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.about-image-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #4b5563; /* Gray text */
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Dark Theme */
+.dark .about-section {
+  background-color: #1e293b; /* Dark background */
+  color: #f8fafc; /* Light text */
+}
+
+.dark .about-title {
+  color: #7c3aed; /* Accent color (Purple) */
+}
+
+.dark .about-image {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.dark .about-description {
+  color: #f8fafc; /* Light text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}

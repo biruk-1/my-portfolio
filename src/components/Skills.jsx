@@ -1,5 +1,6 @@
 import React from "react";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython, FaDatabase, FaGit } from "react-icons/fa";
+import "../styles/Skills.css";
 
 const Skills = () => {
   const skillsData = [
@@ -16,23 +17,26 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section id="skills" className="skills-section">
+      <div className="skills-container">
+        <h2 className="skills-title">Skills</h2>
+        <div className="skills-grid">
           {skillsData.map((skill, index) => (
-            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="text-3xl text-blue-600 mr-4">{skill.icon}</div>
-                <h3 className="text-2xl font-semibold">{skill.name}</h3>
+            <div
+              key={index}
+              className="skill-card"
+            >
+              <div className="skill-header">
+                <div className="skill-icon">{skill.icon}</div>
+                <h3 className="skill-name">{skill.name}</h3>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2.5">
+              <div className="skill-progress">
                 <div
-                  className="bg-blue-600 h-2.5 rounded-full"
+                  className="skill-progress-bar"
                   style={{ width: `${skill.level}%` }}
                 ></div>
               </div>
-              <p className="text-gray-600 mt-2">{skill.category}</p>
+              <p className="skill-category">{skill.category}</p>
             </div>
           ))}
         </div>

@@ -1,0 +1,106 @@
+/* Projects.css */
+
+/* Light Theme (Default) */
+.projects-section {
+  padding: 5rem 0;
+  background-color: #f8fafc; /* Light background */
+  color: #1e293b; /* Dark text */
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2563eb; /* Primary color */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-card {
+  background-color: #ffffff; /* White background */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b; /* Dark text */
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #4b5563; /* Gray text */
+  margin-bottom: 1rem;
+}
+
+.project-technologies {
+  font-size: 0.875rem;
+  color: #64748b; /* Gray text */
+  margin-bottom: 1rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: #2563eb; /* Primary color */
+  transition: opacity 0.3s ease;
+}
+
+.project-link:hover {
+  opacity: 0.8;
+}
+
+/* Dark Theme */
+.dark .projects-section {
+  background-color: #1e293b; /* Dark background */
+  color: #f8fafc; /* Light text */
+}
+
+.dark .projects-title {
+  color: #7c3aed; /* Accent color (Purple) */
+}
+
+.dark .project-card {
+  background-color: #334155; /* Darker gray */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.dark .project-title {
+  color: #f8fafc; /* Light text */
+}
+
+.dark .project-description {
+  color: #f8fafc; /* Light text */
+}
+
+.dark .project-technologies {
+  color: #94a3b8; /* Light gray text */
+}
+
+.dark .project-link {
+  color: #7c3aed; /* Accent color (Purple) */
+}

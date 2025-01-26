@@ -1,36 +1,49 @@
-import React from "react";
-import { FaCode, FaHome, FaUser, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaMoon, FaSun } from "react-icons/fa";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="text-2xl font-bold text-blue-600">Biruk Chali</div>
-        <ul className="flex space-x-6">
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-brand">Biruk Chali</div>
+        <ul className="navbar-links">
           <li>
-            <a href="#home" className="flex items-center text-gray-700 hover:text-blue-600">
-              <FaHome className="mr-2" /> Home
+            <a href="#home" className="navbar-link">
+              <FaHome className="navbar-link-icon" /> Home
             </a>
           </li>
           <li>
-            <a href="#about" className="flex items-center text-gray-700 hover:text-blue-600">
-              <FaUser className="mr-2" /> About
+            <a href="#about" className="navbar-link">
+              <FaUser className="navbar-link-icon" /> About
             </a>
           </li>
           <li>
-            <a href="#projects" className="flex items-center text-gray-700 hover:text-blue-600">
-              <FaProjectDiagram className="mr-2" /> Projects
+            <a href="#projects" className="navbar-link">
+              <FaProjectDiagram className="navbar-link-icon" /> Projects
             </a>
           </li>
           <li>
-            <a href="#skills" className="flex items-center text-gray-700 hover:text-blue-600">
-              <FaCode className="mr-2" /> Skills
+            <a href="#skills" className="navbar-link">
+              <FaCode className="navbar-link-icon" /> Skills
             </a>
           </li>
           <li>
-            <a href="#contact" className="flex items-center text-gray-700 hover:text-blue-600">
-              <FaEnvelope className="mr-2" /> Contact
+            <a href="#contact" className="navbar-link">
+              <FaEnvelope className="navbar-link-icon" /> Contact
             </a>
+          </li>
+          <li>
+            <button onClick={toggleDarkMode} className="dark-mode-toggle">
+              {darkMode ? <FaSun /> : <FaMoon />}
+            </button>
           </li>
         </ul>
       </div>

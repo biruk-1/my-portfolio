@@ -1,0 +1,93 @@
+/* Experience.css */
+
+/* Light Theme (Default) */
+.experience-section {
+    padding: 5rem 0;
+    background-color: #f8fafc; /* Light background */
+    color: #1e293b; /* Dark text */
+  }
+  
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2563eb; /* Primary color */
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .experience-list {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .experience-card {
+    background-color: #ffffff; /* White background */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  }
+  
+  .experience-role {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1e293b; /* Dark text */
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-company {
+    font-size: 1rem;
+    color: #64748b; /* Gray text */
+    margin-bottom: 1rem;
+  }
+  
+  .experience-responsibilities {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #4b5563; /* Gray text */
+  }
+  
+  .experience-responsibilities li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Dark Theme */
+  .dark .experience-section {
+    background-color: #1e293b; /* Dark background */
+    color: #f8fafc; /* Light text */
+  }
+  
+  .dark .experience-title {
+    color: #7c3aed; /* Accent color (Purple) */
+  }
+  
+  .dark .experience-card {
+    background-color: #334155; /* Darker gray */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  }
+  
+  .dark .experience-role {
+    color: #f8fafc; /* Light text */
+  }
+  
+  .dark .experience-company {
+    color: #94a3b8; /* Light gray text */
+  }
+  
+  .dark .experience-responsibilities {
+    color: #f8fafc; /* Light text */
+  }
