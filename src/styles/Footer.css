@@ -1,105 +1,106 @@
 /* Footer.css */
 
-/* General Footer Styles */
+/* Base Footer Styles */
 .footer {
-  background-color: #1f2937; /* Dark background */
+  background-color: #1e293b; /* Dark background */
   color: #ffffff; /* White text */
-  padding: 3rem 1rem; /* Add some vertical padding */
-  text-align: center; /* Center align text */
-  font-family: 'Inter', sans-serif; /* Use a clean sans-serif font */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border at the top */
+  padding: 4rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  font-family: 'Inter', sans-serif; /* Modern font */
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; /* Spacing between footer sections */
+  gap: 2rem;
 }
 
 /* Social Icons */
 .footer-social {
   display: flex;
-  gap: 1.5rem; /* Spacing between icons */
-  justify-content: center;
+  gap: 2rem;
 }
 
 .footer-social-icon {
-  font-size: 1.8rem; /* Icon size */
-  color: #ffffff; /* White icon color */
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1.75rem;
+  color: #ffffff; /* White text */
+  transition: all 0.3s ease;
 }
 
 .footer-social-icon:hover {
-  color: #2563eb; /* Change to primary blue on hover */
-  transform: scale(1.1); /* Slightly enlarge icon on hover */
+  color: #2563eb; /* Primary color */
+  transform: translateY(-3px); /* Lift effect on hover */
 }
 
 /* Copyright Text */
 .footer-copyright {
-  font-size: 0.9rem; /* Slightly smaller font for copyright */
-  color: #94a3b8; /* Muted gray text */
+  font-size: 0.875rem;
+  color: #94a3b8; /* Light gray text */
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .footer-highlight {
-  color: #2563eb; /* Highlight color for the name */
-  font-weight: 600; /* Make it bold */
+  color: #2563eb; /* Highlight name with primary color */
+  font-weight: 600;
 }
 
-/* Navigation Links */
+/* Footer Navigation Links */
 .footer-nav {
   display: flex;
-  gap: 1.5rem; /* Spacing between nav links */
-  justify-content: center; /* Center the navigation links */
-  flex-wrap: wrap; /* Wrap links on smaller screens */
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
 .footer-nav-link {
   color: #94a3b8; /* Light gray text */
-  text-decoration: none; /* Remove underline */
-  font-size: 0.875rem; /* Small font size */
+  text-decoration: none;
+  font-size: 0.875rem;
   transition: color 0.3s ease;
 }
 
 .footer-nav-link:hover {
-  color: #2563eb; /* Change to primary blue on hover */
+  color: #2563eb; /* Primary color on hover */
+}
+
+/* Dark Theme Adjustments */
+.dark .footer {
+  background-color: #0f172a; /* Darker background for dark theme */
+}
+
+.dark .footer-social-icon:hover {
+  color: #7c3aed; /* Purple accent for dark theme */
+}
+
+.dark .footer-nav-link:hover {
+  color: #7c3aed; /* Purple accent for dark theme */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer {
-    padding: 2rem 1rem;
+    padding: 3rem 0;
   }
 
-  .footer-container {
+  .footer-social {
     gap: 1.5rem;
   }
 
   .footer-social-icon {
-    font-size: 1.5rem; /* Slightly smaller icons for mobile */
+    font-size: 1.5rem;
   }
 
   .footer-copyright {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .footer-nav {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
   }
-}
-
-/* Dark Mode Adjustments */
-.dark .footer {
-  background-color: #0f172a; /* Darker background for dark mode */
-}
-
-.dark .footer-social-icon:hover {
-  color: #7c3aed; /* Purple accent for dark mode */
-}
-
-.dark .footer-nav-link:hover {
-  color: #7c3aed; /* Purple accent for dark mode */
 }

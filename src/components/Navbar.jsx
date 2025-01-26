@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaMoon, FaSun } from "react-icons/fa";
 import "../styles/Navbar.css";
+import logoImage from "../assets/myLogo.jpg";
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -13,7 +14,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-brand">Biruk Chali</div>
+        <div className="navbar-brand">
+          <img src={logoImage}
+          alt="my-logo"
+          className="my-logo"/>
+        </div>
         <ul className="navbar-links">
           <li>
             <a href="#home" className="navbar-link">

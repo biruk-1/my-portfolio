@@ -92,3 +92,27 @@
 .dark .dark-mode-toggle:hover {
   color: #7c3aed; /* Accent color (Purple) */
 }
+/* Logo Styles */
+.my-logo {
+  width: 80px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  border-radius: 20%; /* Circular logo */
+  object-fit: cover; /* Ensure the image fits well */
+  border: 2px solid #2563eb; /* Border color for light theme */
+  transition: all 0.3s ease;
+}
+
+.my-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  border-color: #7c3aed; /* Change border color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Dark Theme Adjustments */
+.dark .my-logo {
+  border-color: #7c3aed; /* Border color for dark theme */
+}
+
+.dark .my-logo:hover {
+  border-color: #2563eb; /* Change border color on hover in dark theme */
+}
