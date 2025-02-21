@@ -3,7 +3,7 @@
 /* Light Theme (Default) */
 .projects-section {
   padding: 5rem 0;
-  background-color: #f8fafc; /* Light background */
+  background-color: #e2e8f0; /* Slightly darker background than skills section */
   color: #1e293b; /* Dark text */
 }
 
@@ -26,6 +26,13 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   width: 100%;
+  max-height: 900px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.projects-grid.show-more {
+  max-height: 2000px; /* Adjust as needed */
 }
 
 .project-card {
@@ -41,6 +48,14 @@
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
+.project-image {
+  width: 100%;
+  height: 150px;
+  background-color: #e2e8f0; /* Placeholder background */
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .project-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -52,6 +67,11 @@
   font-size: 1rem;
   color: #4b5563; /* Gray text */
   margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .project-technologies {
@@ -74,9 +94,25 @@
   opacity: 0.8;
 }
 
+.show-more-button {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #2563eb; /* Primary color */
+  color: #ffffff; /* White text */
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-more-button:hover {
+  background-color: #1e40af; /* Darker primary color */
+}
+
 /* Dark Theme */
 .dark .projects-section {
-  background-color: #1e293b; /* Dark background */
+  background-color: #374151; /* Slightly darker background than skills section */
   color: #f8fafc; /* Light text */
 }
 
@@ -87,6 +123,10 @@
 .dark .project-card {
   background-color: #334155; /* Darker gray */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.dark .project-image {
+  background-color: #475569; /* Dark gray placeholder background */
 }
 
 .dark .project-title {
@@ -104,3 +144,12 @@
 .dark .project-link {
   color: #7c3aed; /* Accent color (Purple) */
 }
+
+.dark .show-more-button {
+  background-color: #7c3aed; /* Accent color (Purple) */
+}
+
+.dark .show-more-button:hover {
+  background-color: #6d28d9; /* Darker accent color */
+}
+

@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Footer Social Links */}
         <div className="footer-social">
           <a
-            href="https://www.linkedin.com/in/your-linkedin"
+            href="https://www.linkedin.com/in/biruk-tessema-105521231/"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-icon"
@@ -17,7 +17,7 @@ const Footer = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://github.com/your-github"
+            href="https://github.com/biruk-1"
             target="_blank"
             rel="noopener noreferrer"
             className="footer-social-icon"
