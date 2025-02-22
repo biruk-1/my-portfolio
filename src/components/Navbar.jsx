@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
+import { FaHome, FaUser, FaProjectDiagram, FaCode, FaEnvelope, FaMoon, FaSun, FaBars, FaTimes, FaDownload } from "react-icons/fa";
 import "../styles/Navbar.css";
 import logoImage from "../assets/myLogo.jpg";
 
 const Navbar = () => {
+  // Default to dark mode if no theme is stored
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
+    localStorage.getItem("theme") ? localStorage.getItem("theme") === "dark" : true
   );
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,6 +43,11 @@ const Navbar = () => {
           <li><a href="#projects" className="navbar-link"><FaProjectDiagram /> Projects</a></li>
           <li><a href="#skills" className="navbar-link"><FaCode /> Skills</a></li>
           <li><a href="#contact" className="navbar-link"><FaEnvelope /> Contact</a></li>
+          <li>
+            <a href="/my_cv.pdf" className="cv-button" download onClick={toggleMenu}>
+              <FaDownload /> Download CV
+            </a>
+          </li>
         </ul>
 
         {/* Dark Mode Toggle */}
@@ -58,6 +64,11 @@ const Navbar = () => {
           <li><a href="#projects" onClick={toggleMenu}><FaProjectDiagram /> Projects</a></li>
           <li><a href="#skills" onClick={toggleMenu}><FaCode /> Skills</a></li>
           <li><a href="#contact" onClick={toggleMenu}><FaEnvelope /> Contact</a></li>
+          <li>
+            <a href="/my_cv.pdf" className="cv-button" download onClick={toggleMenu}>
+              <FaDownload /> Download CV
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

@@ -42,10 +42,10 @@ const About = () => {
             className="about-text"
           >
             <p className="about-description">
-              I'm a **passionate software engineer** specializing in **full-stack and mobile app development**, particularly React Native and Redux. My goal is to create seamless, **user-friendly experiences** that drive innovation.
+              I'm a passionate software engineer specializing in full-stack and mobile app development, particularly React Native and Redux. My goal is to create seamless, user-friendly experiences that drive innovation.
             </p>
             <p className="about-description">
-              Currently, I'm pursuing my **BSc in Software Engineering at Adama Science and Technology University** (Graduating 2026). My expertise lies in **problem-solving, building intuitive user interfaces, and crafting high-performance applications**.
+              Currently, I'm pursuing my BSc in Software Engineering at Adama Science and Technology University (Graduating 2026). My expertise lies in problem-solving, building intuitive user interfaces, and crafting high-performance applications.
             </p>
             <motion.a
               href="#contact"

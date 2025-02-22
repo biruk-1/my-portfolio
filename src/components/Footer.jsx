@@ -36,7 +36,7 @@ const Footer = () => {
 
         {/* Footer Copyright */}
         <p className="footer-copyright">
-          © 2024 <span className="footer-highlight">Biruk Chali</span>. All rights reserved.
+          © 2025<span className="footer-highlight">Biruk Chali</span>. All rights reserved.
         </p>
 
         {/* Optional: Footer Navigation Links */}
