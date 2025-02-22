@@ -3,8 +3,9 @@
 /* Light Theme (Default) */
 .projects-section {
   padding: 5rem 0;
-  background-color: #e2e8f0; /* Slightly darker background than skills section */
-  color: #1e293b; /* Dark text */
+  background-color: #e2e8f0;
+  color: #1e293b;
+  text-align: center;
 }
 
 .projects-container {
@@ -16,42 +17,43 @@
 .projects-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #2563eb; /* Primary color */
+  color: #2563eb;
   margin-bottom: 2rem;
-  text-align: center;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  width: 100%;
-  max-height: 900px;
+  width: 90%;
+  max-width: 1200px;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  max-height: 900px;
 }
 
-.projects-grid.show-more {
-  max-height: 2000px; /* Adjust as needed */
+.projects-grid.expanded {
+  max-height: none;
 }
 
 .project-card {
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff;
   padding: 1.5rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .project-card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
   width: 100%;
-  height: 150px;
-  background-color: #e2e8f0; /* Placeholder background */
+  height: 180px;
+  object-fit: cover;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -59,46 +61,63 @@
 .project-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1e293b; /* Dark text */
-  margin-bottom: 1rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
 }
 
 .project-description {
   font-size: 1rem;
-  color: #4b5563; /* Gray text */
-  margin-bottom: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
+}
+
+.project-description.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.show-more-text {
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
 .project-technologies {
   font-size: 0.875rem;
-  color: #64748b; /* Gray text */
+  color: #64748b;
   margin-bottom: 1rem;
 }
 
 .project-links {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .project-link {
-  color: #2563eb; /* Primary color */
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
 .project-link:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 .show-more-button {
   margin-top: 2rem;
   padding: 0.75rem 2rem;
-  background-color: #2563eb; /* Primary color */
-  color: #ffffff; /* White text */
+  background-color: #2563eb;
+  color: #ffffff;
   font-size: 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -107,49 +126,48 @@
 }
 
 .show-more-button:hover {
-  background-color: #1e40af; /* Darker primary color */
+  background-color: #1e40af;
 }
 
 /* Dark Theme */
 .dark .projects-section {
-  background-color: #374151; /* Slightly darker background than skills section */
-  color: #f8fafc; /* Light text */
+  background-color: #374151;
+  color: #f8fafc;
 }
 
 .dark .projects-title {
-  color: #7c3aed; /* Accent color (Purple) */
+  color: #7c3aed;
 }
 
 .dark .project-card {
-  background-color: #334155; /* Darker gray */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  background-color: #334155;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dark .project-image {
-  background-color: #475569; /* Dark gray placeholder background */
+  background-color: #475569;
 }
 
 .dark .project-title {
-  color: #f8fafc; /* Light text */
+  color: #f8fafc;
 }
 
 .dark .project-description {
-  color: #f8fafc; /* Light text */
+  color: #f8fafc;
 }
 
 .dark .project-technologies {
-  color: #94a3b8; /* Light gray text */
+  color: #94a3b8;
 }
 
 .dark .project-link {
-  color: #7c3aed; /* Accent color (Purple) */
+  color: #7c3aed;
 }
 
 .dark .show-more-button {
-  background-color: #7c3aed; /* Accent color (Purple) */
+  background-color: #7c3aed;
 }
 
 .dark .show-more-button:hover {
-  background-color: #6d28d9; /* Darker accent color */
+  background-color: #6d28d9;
 }
-

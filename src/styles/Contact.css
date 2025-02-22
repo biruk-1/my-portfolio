@@ -3,7 +3,7 @@
 /* Light Theme (Default) */
 .contact-section {
   padding: 5rem 0;
-  background-color: #f8fafc; /* Light background */
+  background-color: #e2e8f0; /* Lighter background */
   color: #1e293b; /* Dark text */
 }
 
@@ -49,11 +49,11 @@
 .contact-textarea {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #e2e8f0; /* Light gray */
+  border: 1px solid #cbd5e1; /* Lighter gray */
   border-radius: 0.5rem;
   font-size: 1rem;
   color: #1e293b; /* Dark text */
-  background-color: #f8fafc; /* Light background */
+  background-color: #f1f5f9; /* Lighter background */
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -83,7 +83,7 @@
 
 /* Dark Theme */
 .dark .contact-section {
-  background-color: #1e293b; /* Dark background */
+  background-color: #334155; /* Lighter dark background */
   color: #f8fafc; /* Light text */
 }
 
@@ -92,7 +92,7 @@
 }
 
 .dark .contact-form {
-  background-color: #334155; /* Darker gray */
+  background-color: #475569; /* Lighter dark gray */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
 }
 
@@ -102,8 +102,8 @@
 
 .dark .contact-input,
 .dark .contact-textarea {
-  background-color: #475569; /* Dark gray */
-  border-color: #64748b; /* Light gray */
+  background-color: #607b9e; /* Lighter dark gray */
+  border-color: #7f8fa5; /* Lighter gray */
   color: #f8fafc; /* Light text */
 }
 
@@ -119,4 +119,29 @@
 
 .dark .contact-button:hover {
   background-color: #6d28d9; /* Darker purple */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .contact-form {
+    padding: 0.5rem;
+  }
 }

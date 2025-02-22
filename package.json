@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage":"https://github.com/biruk-1/my-portfolio.git",
+  "homepage": "https://github.com/biruk-1/my-portfolio.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@vitejs/plugin-react": "^4.3.4",
     "framer-motion": "^12.0.5",
     "react": "^19.0.0",
@@ -26,5 +27,4 @@
     "tailwindcss": "^3.3.5",
     "vite": "^6.0.5"
   }
-
 }

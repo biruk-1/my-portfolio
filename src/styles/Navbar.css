@@ -1,118 +1,149 @@
-/* Navbar.css */
-
-/* Light Theme (Default) */
+/* === General Navbar Styles === */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #ffffff; /* White background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background: rgba(164, 174, 186, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2563eb; /* Primary color */
-  transition: transform 0.3s ease;
+/* === Logo Styling === */
+.my-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar-brand:hover {
-  transform: scale(1.05);
+.my-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0px 5px 15px rgba(37, 99, 235, 0.5);
 }
 
+/* === Navbar Links (Desktop) === */
 .navbar-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .navbar-link {
   display: flex;
   align-items: center;
-  color: #4b5563; /* Gray text */
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  margin-left: 2%;
 }
 
 .navbar-link:hover {
-  color: #2563eb; /* Primary color */
+  color: #2563eb;
 }
 
-.navbar-link-icon {
-  margin-right: 0.5rem;
-}
-
-.dark-mode-toggle {
+/* === Mobile Menu Toggle === */
+.menu-toggle {
+  display: none;
   background: none;
   border: none;
-  color: #4b5563; /* Gray text */
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
-.dark-mode-toggle:hover {
-  color: #2563eb; /* Primary color */
+/* === Fullscreen Mobile Menu === */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Dark Theme */
-.dark .navbar {
-  background-color: #1e293b; /* Dark background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-.dark .navbar-brand {
-  color: #7c3aed; /* Accent color (Purple) */
+.mobile-menu-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
-.dark .navbar-link {
-  color: #f8fafc; /* Light text */
+.mobile-menu-links li {
+  margin: 1.5rem 0;
 }
 
-.dark .navbar-link:hover {
-  color: #7c3aed; /* Accent color (Purple) */
-}
-
-.dark .dark-mode-toggle {
-  color: #f8fafc; /* Light text */
-}
-
-.dark .dark-mode-toggle:hover {
-  color: #7c3aed; /* Accent color (Purple) */
-}
-/* Logo Styles */
-.my-logo {
-  width: 80px; /* Adjust size as needed */
-  height: 50px; /* Adjust size as needed */
-  border-radius: 20%; /* Circular logo */
-  object-fit: cover; /* Ensure the image fits well */
-  border: 2px solid #2563eb; /* Border color for light theme */
+.mobile-menu-links a {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.my-logo:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
-  border-color: #7c3aed; /* Change border color on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+.mobile-menu-links a:hover {
+  color: #2563eb;
 }
 
-/* Dark Theme Adjustments */
-.dark .my-logo {
-  border-color: #7c3aed; /* Border color for dark theme */
+/* === Dark Theme === */
+.dark .navbar {
+  background: rgba(30, 41, 59, 0.9);
 }
 
-.dark .my-logo:hover {
-  border-color: #2563eb; /* Change border color on hover in dark theme */
+.dark .navbar-link {
+  color: #f8fafc;
+}
+
+.dark .mobile-menu {
+  background: rgba(20, 20, 20, 0.95);
+}
+
+.dark .mobile-menu-links a {
+  color: #f8fafc;
+}
+
+.dark .mobile-menu-links a:hover {
+  color: #7c3aed;
+}
+
+.dark-mode-toggle{
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+  border:none,
+}
+/* === Mobile Styles === */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+  }
 }
