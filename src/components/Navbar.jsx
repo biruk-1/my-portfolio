@@ -44,7 +44,7 @@ const Navbar = () => {
           <li><a href="#skills" className="navbar-link"><FaCode /> Skills</a></li>
           <li><a href="#contact" className="navbar-link"><FaEnvelope /> Contact</a></li>
           <li>
-            <a href="/my_cv.pdf" className="cv-button" download onClick={toggleMenu}>
+            <a href="/professional resume for a job.pdf" className="cv-button" download onClick={toggleMenu}>
               <FaDownload /> Download CV
             </a>
           </li>
