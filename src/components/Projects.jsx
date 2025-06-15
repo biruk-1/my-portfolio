@@ -17,7 +17,7 @@ const Projects = () => {
       title: "CosmicAI",
       description: "Full-stack astrology and psychic consultation app with real-time AI chatbot integration and location-based recommendations.",
       technologies: "React Native, Express.js, Supabase, RevenueCat, Expo, Expo Push Notifications",
-      githubLink: "https://github.com/biruk-1/CosmicAI",
+      githubLink: "https://github.com/biruk-1/psysc-pro",
       demoLink: "https://cosmicai.vercel.app/",
       image: cosmicAIImage,
       featured: true
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Coach AI",
       description: "Health and fitness mobile application connecting users with coaches nearby, featuring AI-guided fitness tips and real-time chat.",
       technologies: "React Native, Express.js, DigitalOcean, RevenueCat, Expo",
-      githubLink: "https://github.com/biruk-1/CoachApp",
+      githubLink: "https://github.com/biruk-1/coaching-app",
       demoLink: "https://coachai.vercel.app/",
       image: coachAIImage,
       featured: true
@@ -35,7 +35,7 @@ const Projects = () => {
       title: "Hotel Management System Dashboard",
       description: "Comprehensive dashboard system with multi-role access for hotel staff like admin, waiter, cashier, and kitchen, including offline support.",
       technologies: "React, Express.js, SQLite, IndexedDB, cPanel",
-      githubLink: "https://github.com/biruk-1/Hotel-Management-Dashboard",
+      githubLink: "https://github.com/biruk-1/POS-system",
       demoLink: "https://hotel-dashboard.vercel.app/",
       image: hotelImage,
       featured: true

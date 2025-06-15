@@ -25,6 +25,7 @@ const Skills = () => {
             <div
               key={index}
               className="skill-card"
+              data-category={skill.category}
             >
               <div className="skill-header">
                 <div className="skill-icon">{skill.icon}</div>
